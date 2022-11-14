@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+#ul_top_hypers ul {
+  display: inline;
+  margin: auto;
+}
+#ul_top_hypers li {
+  display: inline;
+  padding-right: 5%;
+}
