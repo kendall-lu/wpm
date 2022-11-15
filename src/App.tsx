@@ -5,11 +5,7 @@ import { randomize, Statistic, Word } from "./service/wordService";
 import './App.css';
 import { Words } from "./components/words";
 
-/**
- * bug: 
- * When timer hits 0 and user continues to type, we need to create a new Statistic()
- * 
- */
+
 function App() {
 
 
