@@ -1,47 +1,114 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body {
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    background-color: #2f3e83;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    font-size: calc(20px + 2vmin);
+    line-height: 2;
+    text-transform: capitalize;
 }
 
-.App-link {
-  color: #61dafb;
+.timer {
+    background-color: #ff4998;
+    display: inline-block;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.directions {
+    background-color: #01cc74;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: inline-block;
+    padding: 10px;
+    font-size: 75%;
+    color: black;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 500px;
 }
 
-#ul_top_hypers ul {
-  display: inline;
-  margin: auto;
+.words {
+    background-color: #182c4c;
+    display: inline-block;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 500px;
 }
-#ul_top_hypers li {
-  display: inline;
-  padding-right: 5%;
+.statistics {
+    background-color: #f29a16;
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 150%;
+    margin-top: 15px;
+    text-align: center;
+    padding: 15px;
+    width: 300px;
+}
+.restart-button {
+    padding-top: 15px;
+    border-width: 0px;
+    background-color: #182c4c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.accuracy span {
+    font-size: 100%;
+}
+.wpm span {
+    font-size: 100%;
+}
+
+.timer-countdown p {
+    padding-top: 15px;
+    font-size: 300%;
+    font-weight: bold;
+}
+
+.timer-countdown span {
+    color: white;
+}
+
+.input {
+    font-size: 100%;
+}
+#input {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 150%;
+    text-align: center;
+    width: 150px;
+    border-radius: 5px;
+    border: 0;
+    color: #2f3e83;
+    outline: #01cc74;
+}
+.row {
+    padding-top: 15px;
+}
+
+#ul_row li {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 10px;
 }
