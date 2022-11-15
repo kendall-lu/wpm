@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 
-import { randomize, Statistic, Word } from "./service/wordService";
+import { randomizeJson, Statistic, Word } from "./service/wordService";
 import './App.css';
 import { Words } from "./components/words";
 
@@ -60,11 +60,11 @@ function App() {
     }
   }
   const init = () => {
-    const randomizedWords = randomize();
-    // Create rows : Array<Word>
-    // A row contains <= 5 Word
+    const randomizedWords = randomizeJson();
     const tempRows = [];
     let currentRow = [];
+    // Create rows : Array<Word>
+    // A row contains <= 5 Word
     for (let i = 0; i < randomizedWords.length; i++) {
 
       if (currentRow.length === 5) {

@@ -39,7 +39,7 @@ export class Word {
         this.seen = true;
     }
 }
-function randomize(): Array<Word> {
+function randomizeJson(): Array<Word> {
     const _words: Array<String> = wordsJson.sort(() => Math.random() - 0.5);
     const randomized: Array<Word> = [];
     for (const [index, value] of _words.entries()) {
@@ -48,4 +48,4 @@ function randomize(): Array<Word> {
 
     return randomized;
 }
-export { randomize };
+export { randomizeJson };
