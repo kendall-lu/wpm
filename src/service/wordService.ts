@@ -1,12 +1,5 @@
-import { type } from 'os';
-import { number } from 'yargs';
-
 import wordsJson from '../words.json';
 
-export interface Words {
-    randomize: () => Array<Word>;
-    fromJson: () => Array<Word>;
-}
 export class Statistic {
     correct: number;
     attempted: number;
@@ -16,7 +9,7 @@ export class Statistic {
         this.attempted = 0;
         this.keystrokes = 0;
     }
-    onCompleted(correct: boolean, length: number) {
+    onComplete(correct: boolean, length: number) {
         this.correct += correct ? 1 : 0;
         this.attempted++;
         this.keystrokes += Math.floor(length / 5);

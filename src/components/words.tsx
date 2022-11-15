@@ -17,7 +17,6 @@ function Words({ rows, rowIndex, wordIndex, inputValue }) {
 function Row({ rows, row, wordIndex, rowIndex, inputValue }) {
 
   return <div className='row'>
-
     <ul id='ul_row'>{row.map((word, index) => {
       return rows[rowIndex][wordIndex] === word ?
         <CurrentWord key={`currentRow-${index}`}

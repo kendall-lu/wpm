@@ -9,13 +9,13 @@ import { Words } from "./components/words";
 function App() {
 
 
-  const [words, setWords] = useState<Array<Word>>([]);
+  const [, setWords] = useState<Array<Word>>([]);
   const [rows, setRows] = useState<Array<Array<Word>>>([]);
   const [rowIndex, setRowIndex] = useState<number>(0);
   const [wordIndex, setWordIndex] = useState<number>(0);
   const [inputValue, setInputValue] = useState<String>('');
-  const [seconds, setSeconds] = useState(60);
-  const [hasStarted, setHasStarted] = useState(false);
+  const [seconds, setSeconds] = useState<number>(60);
+  const [hasStarted, setHasStarted] = useState<boolean>(false);
   const [statistics, setStatistics] = useState<Statistic>();
 
 
@@ -28,10 +28,10 @@ function App() {
     const input = e.target.value;
     if (e.keyCode === 32) {
       setInputValue("");
-      const nextWordIndex = wordIndex + 1;
+      const nextWordIndex: number = wordIndex + 1;
       const currentWord: Word = rows[rowIndex][wordIndex];
       currentWord.onComplete(input);
-      statistics.onCompleted(currentWord.correct, currentWord.value.length);
+      statistics.onComplete(currentWord.correct, currentWord.value.length);
       setStatistics(statistics);
       if (nextWordIndex > rows[rowIndex].length - 1) {
         setRowIndex(rowIndex + 1);
